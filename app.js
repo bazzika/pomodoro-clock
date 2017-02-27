@@ -11,7 +11,7 @@ $('#start-stop').html('Start');
 
 
 function timeDisplay(timeInput){
-  var minCon = timeInput/60
+  var minCon = timeInput/60;
   var min = (Math.floor(minCon)).toString();
   var sec = (timeInput%60).toString();
   if(min.length == 1 && sec.length != 1){
@@ -43,14 +43,14 @@ function addWork() {
 };
 
 function minusWork() {
+  if(time.work >= 1) {
   time.work -= 60;
   count = time.work;
   $("p.counter").html(timeDisplay(count));
   $("p.workInt").html(timeDisplay(count));
-  if(time.work >= 1) {
     $("p.workInt").html(timeDisplay(count));
   } else {
-    time.work = 1;
+    time.work = 0;
     count = time.work;
   }
 };
@@ -61,11 +61,11 @@ function addBreak() {
 };
 
 function minusBreak() {
-  time.break -= 60;
   if (time.break >= 1) {
+  time.break -= 60;
     $("p.breakInt").html(timeDisplay(time.break));
   } else {
-    time.break = 1;
+    time.break = 0;
   }
 };
 
