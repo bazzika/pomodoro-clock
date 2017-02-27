@@ -8,7 +8,7 @@ var count = time.work;
 var timer ;
 $('p.type').html('Work');
 $('#start-stop').html('Start');
-
+///
 
 function timeDisplay(timeInput){
   var minCon = timeInput/60;
