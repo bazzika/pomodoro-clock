@@ -43,14 +43,14 @@ function addWork() {
 };
 
 function minusWork() {
-  if(time.work >= 1) {
+  if(time.work > 60) {
   time.work -= 60;
   count = time.work;
   $("p.counter").html(timeDisplay(count));
   $("p.workInt").html(timeDisplay(count));
     $("p.workInt").html(timeDisplay(count));
   } else {
-    time.work = 0;
+    time.work = 60;
     count = time.work;
   }
 };
@@ -61,11 +61,11 @@ function addBreak() {
 };
 
 function minusBreak() {
-  if (time.break >= 1) {
+  if (time.break > 60) {
   time.break -= 60;
     $("p.breakInt").html(timeDisplay(time.break));
   } else {
-    time.break = 0;
+    time.break = 60;
   }
 };
 
