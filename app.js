@@ -91,7 +91,7 @@ function checkStatus() {
   };
 };
 
-
+//
 function countDown(){
   if (count >= 1) {
     count -= 1;
